@@ -1,0 +1,27 @@
+.error-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffe6e6;
+  color: #cc0000;
+  padding: 10px;
+  border: 1px solid #ff0000;
+  border-radius: 5px;
+  margin: 48px 0;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.success-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ecffe6;
+  color: #4ecc00;
+  padding: 10px;
+  border: 1px solid #00ff2a;
+  border-radius: 5px;
+  margin: 48px 0;
+}

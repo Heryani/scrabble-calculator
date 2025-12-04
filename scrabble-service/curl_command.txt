@@ -1,0 +1,32 @@
+curl -X POST http://localhost:8080/api/scoring-rules/batch \
+  -H "Content-Type: application/json" \
+  -d '[
+    {
+      "letters": ["A", "E", "I", "O", "U", "L", "N", "S", "T", "R"],
+      "point": 1
+    },
+    {
+      "letters": ["D", "G"],
+      "point": 2
+    },
+    {
+      "letters": ["B", "C", "M", "P"],
+      "point": 3
+    },
+    {
+      "letters": ["F", "H", "V", "W", "Y"],
+      "point": 4
+    },
+    {
+      "letters": ["K"],
+      "point": 6
+    },
+    {
+      "letters": ["J", "X"],
+      "point": 8
+    },
+    {
+      "letters": ["Q", "Z"],
+      "point": 10
+    }
+  ]'

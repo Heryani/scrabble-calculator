@@ -1,0 +1,46 @@
+.tile {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  background-color: #ffe173;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3px;
+  position: relative;
+
+  border: 3px solid lightyellow;
+  transition: border-color 120ms ease;
+}
+
+.tile:focus-within {
+  border: 3px solid lightblue;
+}
+
+.letter-input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  caret-color: transparent;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+}
+
+.point-badge {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: darkslategray;
+  font-size: 14px;
+  font-weight: bold;
+}
