@@ -62,6 +62,7 @@ public class ScoreService {
 
     private int calculateScoreValue(String text) {
         return text
+                .toUpperCase()
                 .chars()
                 .map(letter -> {
                     char charLetter = (char) letter;

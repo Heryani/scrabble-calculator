@@ -36,10 +36,10 @@ public class ScoreServiceTests {
     class SaveScoreTests {
         @BeforeEach
         public void setup() {
-            when(scoringRuleServiceMock.findByLetter('h')).thenReturn(new ScoringRule('H', 4));
-            when(scoringRuleServiceMock.findByLetter('e')).thenReturn(new ScoringRule('E', 1));
-            when(scoringRuleServiceMock.findByLetter('l')).thenReturn(new ScoringRule('L', 1));
-            when(scoringRuleServiceMock.findByLetter('o')).thenReturn(new ScoringRule('O', 1));
+            when(scoringRuleServiceMock.findByLetter('H')).thenReturn(new ScoringRule('H', 4));
+            when(scoringRuleServiceMock.findByLetter('E')).thenReturn(new ScoringRule('E', 1));
+            when(scoringRuleServiceMock.findByLetter('L')).thenReturn(new ScoringRule('L', 1));
+            when(scoringRuleServiceMock.findByLetter('O')).thenReturn(new ScoringRule('O', 1));
 
             when(scoreRepositoryMock.save(any())).thenAnswer(invocation -> {
                 Score savedScore = invocation.getArgument(0);
@@ -115,7 +115,7 @@ public class ScoreServiceTests {
             try {
                 scoreService.save(text, value);
             } catch (IllegalArgumentException e) {
-                assertEquals("Cannot find ScoringRule for letter i", e.getMessage());
+                assertEquals("Cannot find ScoringRule for letter I", e.getMessage());
             }
         }
     }
