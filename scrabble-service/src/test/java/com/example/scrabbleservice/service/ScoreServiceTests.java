@@ -15,8 +15,7 @@ import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
@@ -139,7 +138,7 @@ public class ScoreServiceTests {
 
             assertEquals(5, topScores.size());
             for (int i = 0; i < topScores.size() - 1; i++) {
-                assert(topScores.get(i).getValue() >= topScores.get(i + 1).getValue());
+                assertTrue(topScores.get(i).getValue() >= topScores.get(i + 1).getValue());
             }
         }
 
@@ -158,7 +157,7 @@ public class ScoreServiceTests {
 
             assertEquals(4, topScores.size()); // should return only unique scores
             for (int i = 0; i < topScores.size() - 1; i++) {
-                assert(topScores.get(i).getValue() >= topScores.get(i + 1).getValue());
+                assertTrue(topScores.get(i).getValue() >= topScores.get(i + 1).getValue());
             }
         }
 
@@ -175,7 +174,7 @@ public class ScoreServiceTests {
 
             assertEquals(3, topScores.size());
             for (int i = 0; i < topScores.size() - 1; i++) {
-                assert(topScores.get(i).getValue() >= topScores.get(i + 1).getValue());
+                assertTrue(topScores.get(i).getValue() >= topScores.get(i + 1).getValue());
             }
         }
     }
